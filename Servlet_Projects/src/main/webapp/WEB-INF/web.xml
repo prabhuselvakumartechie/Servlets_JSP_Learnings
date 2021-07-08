@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-class>net.servlet.project.simple.HelloServlet</servlet-class>
+		<servlet-name>HelloWorldServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloWorldServlet</servlet-name>
+		<url-pattern>/MyFirstServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-class>net.servlet.project.simple.ByImplServletInfc
+		</servlet-class>
+		<servlet-name>ByServletInterface</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ByServletInterface</servlet-name>
+		<url-pattern>/ByImplementingServletInterface</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-class>net.servlet.project.simple.ByExtsGenericServletCls</servlet-class>
+		<servlet-name>ByGenericServletClass</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ByGenericServletClass</servlet-name>
+		<url-pattern>/ByExtendsGenericServletClass</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-class>net.servlet.project.simple.ByExtsHttpServletCls</servlet-class>
+		<servlet-name>ByHttpServletClass</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ByHttpServletClass</servlet-name>
+		<url-pattern>/ByExtendsHttpServletClass</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-class>net.servlet.project.simple.LoginServlet</servlet-class>
+		<servlet-name>LoginServlet</servlet-name>
+		<loan-on-startup>0</loan-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-class>net.servlet.project.simple.WelcomeServlet</servlet-class>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<loan-on-startup>0</loan-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/WelcomeServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
