@@ -7,8 +7,8 @@
 	<servlet-mapping>
 		<servlet-name>HelloWorldServlet</servlet-name>
 		<url-pattern>/MyFirstServlet</url-pattern>
-	</servlet-mapping>
-	
+	</servlet-mapping> 
+
 	<servlet>
 		<servlet-class>net.servlet.project.simple.ByImplServletInfc
 		</servlet-class>
@@ -18,25 +18,27 @@
 		<servlet-name>ByServletInterface</servlet-name>
 		<url-pattern>/ByImplementingServletInterface</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
-		<servlet-class>net.servlet.project.simple.ByExtsGenericServletCls</servlet-class>
+		<servlet-class>net.servlet.project.simple.ByExtsGenericServletCls
+		</servlet-class>
 		<servlet-name>ByGenericServletClass</servlet-name>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ByGenericServletClass</servlet-name>
 		<url-pattern>/ByExtendsGenericServletClass</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
-		<servlet-class>net.servlet.project.simple.ByExtsHttpServletCls</servlet-class>
+		<servlet-class>net.servlet.project.simple.ByExtsHttpServletCls
+		</servlet-class>
 		<servlet-name>ByHttpServletClass</servlet-name>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ByHttpServletClass</servlet-name>
 		<url-pattern>/ByExtendsHttpServletClass</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-class>net.servlet.project.simple.LoginServlet</servlet-class>
 		<servlet-name>LoginServlet</servlet-name>
@@ -46,9 +48,10 @@
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
-		<servlet-class>net.servlet.project.simple.WelcomeServlet</servlet-class>
+		<servlet-class>net.servlet.project.simple.WelcomeServlet
+		</servlet-class>
 		<servlet-name>WelcomeServlet</servlet-name>
 		<loan-on-startup>0</loan-on-startup>
 	</servlet>
@@ -56,6 +59,76 @@
 		<servlet-name>WelcomeServlet</servlet-name>
 		<url-pattern>/WelcomeServlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-class>net.servlet.project.simple.ServletConfigExample
+		</servlet-class>
+		<servlet-name>ServletConfigDemo</servlet-name>
+		<init-param>
+			<param-name>MyName</param-name>
+			<param-value>PrabhuSelvakumar</param-value>
+		</init-param>
+		>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletConfigDemo</servlet-name>
+		<url-pattern>/ServletConfigTest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-class>net.servlet.project.simple.ServletContextExample
+		</servlet-class>
+		<servlet-name>ServletContextDemo</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContextDemo</servlet-name>
+		<url-pattern>/ServletContextTest</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>ContextName</param-name>
+		<param-value>TestContextValue</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SampleContext</param-name>
+		<param-value>DemoContextvalue</param-value>
+	</context-param>
 	
 	
+	<servlet>
+	 	<description>This servlet is used to login check</description>
+		<display-name>LoginServletCookie</display-name>
+		<servlet-class>net.servlet.project.simple.LoginServletCookie</servlet-class>
+		<servlet-name>LoginServletCookie</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServletCookie</servlet-name>
+		<url-pattern>/LoginServletCookie</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<description>This servlet is Welcome the Profile page.</description>
+		<display-name>ProfileServlet</display-name>
+		<servlet-class>net.servlet.project.simple.ProfileServlet
+		</servlet-class>
+		<servlet-name>ProfileServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfileServlet</servlet-name>
+		<url-pattern>/ProfileServlet</url-pattern>
+	</servlet-mapping> 
+	
+	
+	<servlet>
+		<description>This servlet is Logout the session.</description>
+		<display-name>LogoutServletCookie</display-name>
+		<servlet-class>net.servlet.project.simple.LogoutServletCookie
+		</servlet-class>
+		<servlet-name>LogoutServletCookie</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServletCookie</servlet-name>
+		<url-pattern>/LogoutServletCookie</url-pattern>
+	</servlet-mapping>
+	
+
 </web-app>
