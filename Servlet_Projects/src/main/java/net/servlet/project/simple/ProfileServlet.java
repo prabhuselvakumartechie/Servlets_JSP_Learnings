@@ -11,6 +11,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author prabhu.selvakumar
@@ -22,7 +23,8 @@ public class ProfileServlet extends HttpServlet {
 		
 		PrintWriter aPrintWriter = res.getWriter();
 		Cookie cookies[] = req.getCookies();
-
+		HttpSession session = req.getSession();
+		
 		if (cookies != null && cookies[0] != null) {
 			String name = cookies[0].getValue();
 			if (name != null && !name.equals("")) {
