@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>welcomeServlet</servlet-name>
+  	<jsp-file>/welcome.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  	<servlet-name>SendRedirectServlet</servlet-name>
+  	<jsp-file>/SendRedirect.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>welcomeServlet</servlet-name>
+  	<url-pattern>/welcome</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet-mapping>
+  	<servlet-name>SendRedirectServlet</servlet-name>
+  	<url-pattern>/SendRedirect</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

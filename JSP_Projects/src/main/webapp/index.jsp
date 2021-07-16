@@ -8,8 +8,9 @@
 </head>
 <body>
 	<form action="welcome.jsp">
-		<input type="text" name="uname"> <input type="submit"
-			value="Go"> <input type="Reset" value="Reset">
+		<input type="text" name="uname"> 
+		<input type="submit" value="Go"> 
+		<input type="Reset" value="Reset">
 	</form>
 </body>
 </html>

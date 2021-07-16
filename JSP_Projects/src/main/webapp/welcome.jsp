@@ -24,5 +24,21 @@
 	<%= "This is Declaration Tag Example >>> "+ name %>
 	
 	<%= "Cube of 3 is: "+cube(3) %>
+	
+	<br>
+	<br>
+	<h3> This is JSP Request Object</h3>
+	<% String uname = request.getParameter("uname");
+	out.print("Welcome this from Request Implicit Object " +uname);
+	%>
+	
+	<br>
+	<br>
+	<h3> This is JSP Response Object</h3>
+	<a href="/JSP_Projects/SendRedirect" target="_blank">JSP Response</a>
+	
+	<br>
+	<br>
+	
 </body>
 </html>
