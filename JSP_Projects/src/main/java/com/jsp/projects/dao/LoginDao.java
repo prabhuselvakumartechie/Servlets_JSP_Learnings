@@ -19,11 +19,11 @@ public class LoginDao {
 	public static boolean validate(LoginBean bean) {
 		boolean status = false;
 		try {
-			Connection con = ConnectionProvider.getConnection();
+			Connection aConnection = ConnectionProvider.getConnection();
 
-			PreparedStatement ps = con.prepareStatement("select * from users where email=? and pass=?");
+			PreparedStatement ps = aConnection.prepareStatement("select * from users where name=? and password=?");
 
-			ps.setString(1, bean.getEmail());
+			ps.setString(1, bean.getName());
 			ps.setString(2, bean.getPassword());
 
 			ResultSet rs = ps.executeQuery();
@@ -34,6 +34,5 @@ public class LoginDao {
 		}
 
 		return status;
-
 	}
 }

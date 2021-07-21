@@ -5,13 +5,13 @@
 
 <jsp:setProperty property="*" name="obj" />
 <jsp:include page="loginindex.jsp"></jsp:include>
+<br>
 <%
 boolean status = LoginDao.validate(obj);
 if (status) {
-	out.println("You r successfully logged in");
+	out.println("You are successfully logged in");
 	session.setAttribute("session", "TRUE");
 } else {
 	out.print("Sorry, email or password error");
 }
 %>
-
