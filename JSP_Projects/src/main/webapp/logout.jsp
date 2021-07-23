@@ -4,19 +4,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Profile JSP Page</title>
+<title>Login JSP Form</title>
 </head>
 <body>
-<%@ include file="loginindex.jsp"%>
-
-	<%
-	String isValidSession = (String) session.getAttribute("session");
-	if ("True".equalsIgnoreCase(isValidSession)) {
-		out.println("Welcome to profile page, ");
-	} else {
+	<%@ include file="loginindex.jsp"%>
+	
+	<% String isSessionValid = (String)session.getAttribute("session"); 
+	
+	if("True".equalsIgnoreCase(isSessionValid)){
+		session.invalidate();
+		out.print("Successfully logout.");
+	}else{
 		request.setAttribute("profile_msg", "Kindly, login first");
 		response.sendRedirect("login.jsp");
 	}
+	
 	%>
+
 </body>
 </html>
